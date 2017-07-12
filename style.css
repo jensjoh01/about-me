@@ -1,16 +1,39 @@
 
+
+body{
+  background-image: url("imgs/background-2004102_1920.jpg")
+}
+
 h1{
   text-align: center;
   border: solid;
   border-color: blue;
+  background-color: white;
+  width: 20%;
+  border: 3px solid blue;
+  padding: 3px;
+  margin: auto;
+
 }
 
 h2{
-  border: double;
+  border: solid;
   border-color: blue;
+  background-color: white;
+  margin: auto;
+  width: 20%;
+  border: 3px solid blue;
+  padding: 3px;
+  text-align: center;
 }
 
 #pic1{
   display:block;
   margin: auto;
+}
+
+.info{
+  background-color: white;
+  display: block;
+  padding: 10px;
 }
