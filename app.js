@@ -1,6 +1,6 @@
 'use strict';
 
-
+/*
 alert('Hi! I\'m John, you\'re about to play a guessing game where you need to guess if the clue about me is true or false by entering \'yes/no\' or \'y/n\' in the prompt box.');
 var userName = prompt('Before we get started I need to know who is playing, please enter your name:');
 console.log('username: ' + userName);
@@ -10,7 +10,7 @@ while (userName === null || userName === ''){
 };
 
 alert('Nice to meet you ' + userName + '!');
-/*
+
 var question1ElbowLick = prompt('Question 1: I can lick my elbow?').toLowerCase();
 console.log('question1ElbowLick user answer: ' + question1ElbowLick);
 
@@ -66,3 +66,37 @@ if (question5SouthAmerica === 'yes' || question5SouthAmerica === 'y'){
   alert('Please enter yes/no or y/n');
 }
 */
+//Guessing game.
+
+alert('Great guessing but let\'s see if you can guess my lucky number in 4 tries!');
+
+var luckyNumber = 8;
+var userNumber = parseInt(prompt('Guess a number between 1-20.'));
+var i = 0;
+console.log('Users number: ', userNumber);
+
+if( luckyNumber === userNumber){ //If they guess it correctly on the first try.
+  alert('Good Job! Yes ' + luckyNumber + ' is my lucky number.');
+} else {
+  while( i < 3 && userNumber != luckyNumber ){
+    if (userNumber > luckyNumber){
+      userNumber = parseInt(prompt('Too high! Guess Again'));
+    } else {
+      userNumber = parseInt(prompt('Too low! Guess Again'));
+    }
+
+    i++;
+    var numberTries = i + 2;
+
+    console.log('i: ', i);
+    console.log('userNumber:', userNumber);
+    console.log('number of tries: ' + numberTries);
+  }}
+
+if( userNumber === luckyNumber){
+  alert('Good Job! Yes ' + luckyNumber + ' is my lucky number.');
+}
+
+if (numberTries > 4){
+  alert('Sorry! Better luck next time!');
+}
