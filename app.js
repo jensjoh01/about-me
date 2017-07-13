@@ -71,6 +71,7 @@ if (question5SouthAmerica === 'yes' || question5SouthAmerica === 'y'){
 }
 
 //Guess my lucky number game.
+//question 6
 
 alert('Great guessing but let\'s see if you can guess my lucky number in 4 tries!');
 /* I'm having problems with cleaning up this code. Need while {if, else if, else}*/
@@ -102,12 +103,11 @@ if (userGuess === 4 && userNumber !== luckyNumber){
   alert('Sorry, better luck next time!');
 }
 
-
-//guess the countries I have been to.
+//question 7
+//guess the countries I have been to game
 
 var countries = ['spain', 'germany', 'france', 'denmark', 'belgium', 'thailand', 'nepal', 'scotland', 'czech Republic', 'brazil'];
 var guessesRemaining = 6;
-
 
 while (guessesRemaining > 0){
   var countryGuess = prompt('Can you guess which countries I have been to?').toLowerCase();

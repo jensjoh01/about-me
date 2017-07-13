@@ -1,45 +1,72 @@
 
-
 body{
-  background-image: url("imgs/background-2004102_1920.jpg")
+  width: 90%;
+  margin: 0 auto;
 }
 
-h1{
-  text-align: center;
-  border: solid;
-  border-color: blue;
-  background-color: grey;
-  width: 20%;
-  border: 3px solid blue;
-  padding: 3px;
-  margin: auto;
-
+header {
+  /*border: solid;*/
+  position: relative;
+  border-color: orange;
+  height: 160px;
+  background-color: #aeaca8;
 }
 
-h2{
-  border: solid;
-  border-color: blue;
-  background-color: grey;
-  margin: auto;
-  width: 20%;
-  border: 3px solid blue;
-  padding: 3px;
-  text-align: center;
+.quote{
+  font-size: 16px;
+  /*border: dotted;*/
 }
 
 #pic1{
-  display:block;
-  margin: auto;
+  /*border: dotted;*/
+  position: absolute;
+  top: 3%;
+  right: 1.2%;
+  width: 210px;
+  height: 150px;
 }
 
-.info{
-  background-color: grey;
-  display: block;
-  padding: 10px;
+#content{
+  /*border: dotted;*/
+  /*border-color: orange;*/
 }
 
-.list{
-  background-color: grey;
-  display: block;
-  pad: 10px;
+#Bio{
+  /*border: solid;*/
+  border-color: orange;
+}
+
+#bioHeader{
+  /*border: solid;
+  border-color: orange;*/
+  text-align: center;
+  background-color: #aeaca8;
+}
+
+.centerInfo{
+  text-align: center;
+  border: solid;
+  border-color: orange;
+  width: 30%;
+  float: left;
+  margin: 1%;
+  height: 220px;
+  background-color: #aeaca8;
+}
+
+.topten{
+  text-align: center;
+  /*border: dotted;
+  border-color: orange;*/
+  margin-top: 280px;
+}
+
+#toptenlist{
+  border: solid;
+  border-color: orange;
+}
+
+#biotext{
+  border: solid;
+  border-color: orange;
 }
