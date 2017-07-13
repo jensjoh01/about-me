@@ -21,7 +21,7 @@ var alertWrong = ['Wrong can\'t lick my elbow!','Wrong!!','No unfortunately not!
 var questionFun = function(){
 
   for(var i=0; i< qArray.length; i++){
-    var userAns = prompt(qArray[i])
+    var userAns = prompt(qArray[i]).toUpperCase();
     if(userAns === longAns[i] || userAns === shortAns[i]){
       alert(alertRight[i]);
       correctAnswers ++;
@@ -35,7 +35,7 @@ var questionFun = function(){
 
   }
 
-}
+};
 
 questionFun();
 
