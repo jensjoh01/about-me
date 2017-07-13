@@ -10,6 +10,9 @@ var correctAnswers = 0;
 
 alert('Nice to meet you ' + userName + '!');
 
+
+
+var question1 = function(){
 var question1ElbowLick = prompt('Question 1: I can lick my elbow?').toLowerCase();
 console.log('question1ElbowLick user answer: ' + question1ElbowLick);
 
@@ -20,8 +23,10 @@ if (question1ElbowLick === 'yes' || question1ElbowLick === 'y'){
   correctAnswers++;
 } else{
   alert('Please enter yes/no or y/n');
-}
+}}
 
+
+var question2 = function(){
 var question2ArcticCircle = prompt('Question 2: I have been to the Arctic Circle?').toLowerCase();
 console.log('question2ArcticCircle user answer: ' + question2ArcticCircle);
 
@@ -32,11 +37,12 @@ if (question2ArcticCircle === 'yes' || question2ArcticCircle === 'y'){
   alert('Wrong, I spent one summer working in the Arctic Ocean...the sun NEVER set!');
 } else{
   alert('Please enter yes/no or y/n');
-}
+}}
 
+
+var question3 = function(){
 var question3WebbedToes = prompt('Question 3: I have webbed toes?').toLowerCase();
 console.log('question3WebbedToes user answer: ' + question3WebbedToes);
-
 if (question3WebbedToes === 'yes' || question3WebbedToes === 'y'){
   alert('No, unfortunately I do not have webbed toes. Swimming would be so much easier.');
 } else if (question3WebbedToes === 'no' || question3WebbedToes === 'n'){
@@ -44,11 +50,12 @@ if (question3WebbedToes === 'yes' || question3WebbedToes === 'y'){
   correctAnswers++;
 } else{
   alert('Please enter yes/no or y/n');
-}
+}}
 
+
+var question4 = function(){
 var question4PilotsLicense = prompt('Question 4: I have my pilots license?').toLowerCase();
 console.log('question4PilotsLicense user anser: ' + question4PilotsLicense);
-
 if (question4PilotsLicense === 'yes' || question4PilotsLicense === 'y'){
   alert('Nope, but I hope to get it soon!');
 } else if (question4PilotsLicense === 'no' || question4PilotsLicense === 'n'){
@@ -56,11 +63,11 @@ if (question4PilotsLicense === 'yes' || question4PilotsLicense === 'y'){
   correctAnswers++;
 } else{
   alert('Please enter yes/no or y/n');
-}
+}}
 
+var question5 = function(){
 var question5SouthAmerica = prompt('Question 5: I have travelled to South America?').toLowerCase();
 console.log('question5SouthAmerica :' + question5SouthAmerica);
-
 if (question5SouthAmerica === 'yes' || question5SouthAmerica === 'y'){
   alert('Correct! I have been to Rio de Janeiro.');
   correctAnswers++;
@@ -68,11 +75,12 @@ if (question5SouthAmerica === 'yes' || question5SouthAmerica === 'y'){
   alert('Wrong! I have been to Rio de Janeiro.');
 } else{
   alert('Please enter yes/no or y/n');
-}
+}}
 
 //Guess my lucky number game.
 //question 6
 
+var question6 = function(){
 alert('Great guessing but let\'s see if you can guess my lucky number in 4 tries!');
 /* I'm having problems with cleaning up this code. Need while {if, else if, else}*/
 var luckyNumber = 8;
@@ -101,11 +109,12 @@ while(userGuess < 4 && userNumber !== luckyNumber){
 }
 if (userGuess === 4 && userNumber !== luckyNumber){
   alert('Sorry, better luck next time!');
-}
+}}
 
 //question 7
 //guess the countries I have been to game
 
+var question7 = function(){
 var countries = ['spain', 'germany', 'france', 'denmark', 'belgium', 'thailand', 'nepal', 'scotland', 'czech Republic', 'brazil'];
 var guessesRemaining = 6;
 
@@ -129,6 +138,15 @@ while (guessesRemaining > 0){
     alert('Sorry, you\'re out of guesses. The countries I have been to are: ' + countries);
   }
   console.log(guessesRemaining);
-}
+}}
+
+question1();
+question2();
+question3();
+question4();
+question5();
+question6();
+question7();
+
 
 alert('Thanks for playing ' + userName + '! You got ' + correctAnswers + ' questions correct.');
