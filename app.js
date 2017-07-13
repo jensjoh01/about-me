@@ -1,13 +1,12 @@
 'use strict';
-/*
 
 alert('Hi! I\'m John, you\'re about to play a guessing game where you need to guess if the clue about me is true or false by entering \'yes/no\' or \'y/n\' in the prompt box.');
 var userName = prompt('Before we get started I need to know who is playing, please enter your name:');
 console.log('username: ' + userName);
 var correctAnswers = 0;
-while (userName === null || userName === ''){
-  userName = prompt('I\'m sorry, please enter your name if you want to continue');
-};
+// while (userName === null || userName === ''){
+//   userName = prompt('I\'m sorry, please enter your name if you want to continue');
+// };
 
 alert('Nice to meet you ' + userName + '!');
 
@@ -70,7 +69,7 @@ if (question5SouthAmerica === 'yes' || question5SouthAmerica === 'y'){
 } else{
   alert('Please enter yes/no or y/n');
 }
-*/
+
 //Guess my lucky number game.
 
 alert('Great guessing but let\'s see if you can guess my lucky number in 4 tries!');
@@ -92,6 +91,7 @@ while(userGuess < 4 && userNumber !== luckyNumber){
   else if (userNumber === luckyNumber){
     alert('Good Job! Yes ' + luckyNumber + ' is my lucky number.');
     userGuess = 4;
+    correctAnswers++;
     break;
   } else {
     alert('Please pick a number from 1-20');
