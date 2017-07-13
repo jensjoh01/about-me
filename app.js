@@ -1,5 +1,7 @@
 'use strict';
 
+
+
 alert('Hi! I\'m John, you\'re about to play a guessing game where you need to guess if the clue about me is true or false by entering \'yes/no\' or \'y/n\' in the prompt box.');
 var userName = prompt('Before we get started I need to know who is playing, please enter your name:');
 console.log('username: ' + userName);
@@ -7,75 +9,37 @@ var correctAnswers = 0;
 // while (userName === null || userName === ''){
 //   userName = prompt('I\'m sorry, please enter your name if you want to continue');
 // };
-
 alert('Nice to meet you ' + userName + '!');
 
 
+var qArray = ['Question 1: I can lick my elbow?','Question 2: I have been to the Arctic Circle?','Question 3: I have webbed toes?','Question 4: I have my pilots license?','Question 5: I have travelled to South America?'];
+var shortAns = ['N','Y','N','N','Y'];
+var longAns = ['NO','YES','NO','NO','YES'];
+var alertRight = ['You are correct!','Correct! I spend one summer working in the Arctic Ocean!','You are correct!!','Correct I am getting it soon','Correct I am been to Brazil!!'];
+var alertWrong = ['Wrong can\'t lick my elbow!','Wrong!!','No unfortunately not!!','No, I hope to get it soon!','Wrong! I have been to Brazil!'];
 
-var question1 = function(){
-var question1ElbowLick = prompt('Question 1: I can lick my elbow?').toLowerCase();
-console.log('question1ElbowLick user answer: ' + question1ElbowLick);
+var questionFun = function(){
 
-if (question1ElbowLick === 'yes' || question1ElbowLick === 'y'){
-  alert('Wrong! I cannot lick my elbow...sigh');
-} else if (question1ElbowLick === 'no' || question1ElbowLick === 'n'){
-  alert('You are correct!');
-  correctAnswers++;
-} else{
-  alert('Please enter yes/no or y/n');
-}}
+  for(var i=0; i< qArray.length; i++){
+    var userAns = prompt(qArray[i])
+    if(userAns === longAns[i] || userAns === shortAns[i]){
+      alert(alertRight[i]);
+      correctAnswers ++;
 
+    } else if(userAns !== longAns[i] || userAns !== shortAns[i]){
+      alert(alertWrong[i]);
+    } else{
+      alert('Yes or No please');
 
-var question2 = function(){
-var question2ArcticCircle = prompt('Question 2: I have been to the Arctic Circle?').toLowerCase();
-console.log('question2ArcticCircle user answer: ' + question2ArcticCircle);
+    }
 
-if (question2ArcticCircle === 'yes' || question2ArcticCircle === 'y'){
-  alert('Correct! I spent one summer working in the Arctic Ocean...the sun NEVER set!');
-  correctAnswers++;
-} else if (question2ArcticCircle === 'no' || question2ArcticCircle === 'n'){
-  alert('Wrong, I spent one summer working in the Arctic Ocean...the sun NEVER set!');
-} else{
-  alert('Please enter yes/no or y/n');
-}}
+  }
 
+}
 
-var question3 = function(){
-var question3WebbedToes = prompt('Question 3: I have webbed toes?').toLowerCase();
-console.log('question3WebbedToes user answer: ' + question3WebbedToes);
-if (question3WebbedToes === 'yes' || question3WebbedToes === 'y'){
-  alert('No, unfortunately I do not have webbed toes. Swimming would be so much easier.');
-} else if (question3WebbedToes === 'no' || question3WebbedToes === 'n'){
-  alert('You are correct! But wouldn\'t it be nice to be able to swim faster?');
-  correctAnswers++;
-} else{
-  alert('Please enter yes/no or y/n');
-}}
+questionFun();
 
 
-var question4 = function(){
-var question4PilotsLicense = prompt('Question 4: I have my pilots license?').toLowerCase();
-console.log('question4PilotsLicense user anser: ' + question4PilotsLicense);
-if (question4PilotsLicense === 'yes' || question4PilotsLicense === 'y'){
-  alert('Nope, but I hope to get it soon!');
-} else if (question4PilotsLicense === 'no' || question4PilotsLicense === 'n'){
-  alert('Correct, but I am planning on getting it soon!');
-  correctAnswers++;
-} else{
-  alert('Please enter yes/no or y/n');
-}}
-
-var question5 = function(){
-var question5SouthAmerica = prompt('Question 5: I have travelled to South America?').toLowerCase();
-console.log('question5SouthAmerica :' + question5SouthAmerica);
-if (question5SouthAmerica === 'yes' || question5SouthAmerica === 'y'){
-  alert('Correct! I have been to Rio de Janeiro.');
-  correctAnswers++;
-} else if (question5SouthAmerica === 'no' || question5SouthAmerica === 'n'){
-  alert('Wrong! I have been to Rio de Janeiro.');
-} else{
-  alert('Please enter yes/no or y/n');
-}}
 
 //Guess my lucky number game.
 //question 6
@@ -140,13 +104,10 @@ while (guessesRemaining > 0){
   console.log(guessesRemaining);
 }}
 
-question1();
-question2();
-question3();
-question4();
-question5();
 question6();
 question7();
+
+
 
 
 alert('Thanks for playing ' + userName + '! You got ' + correctAnswers + ' questions correct.');
