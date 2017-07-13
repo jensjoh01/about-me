@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 
 alert('Hi! I\'m John, you\'re about to play a guessing game where you need to guess if the clue about me is true or false by entering \'yes/no\' or \'y/n\' in the prompt box.');
 var userName = prompt('Before we get started I need to know who is playing, please enter your name:');
@@ -70,38 +70,38 @@ if (question5SouthAmerica === 'yes' || question5SouthAmerica === 'y'){
 } else{
   alert('Please enter yes/no or y/n');
 }
-
+*/
 //Guess my lucky number game.
 
 alert('Great guessing but let\'s see if you can guess my lucky number in 4 tries!');
-
+/* I'm having problems with cleaning up this code. Need while {if, else if, else}*/
 var luckyNumber = 8;
-var userNumber = parseInt(prompt('Guess a number between 1-20.'));
-var i = 0;
-console.log('Users number: ', userNumber);
+var userNumber;
+var userGuess = 0;
 
-if( luckyNumber === userNumber){ //If they guess it correctly on the first try.
-  alert('Good Job! Yes ' + luckyNumber + ' is my lucky number.');
-  correctAnswers++;
-} else {
-  while( i < 3 && userNumber !== luckyNumber ){
-    if (userNumber > luckyNumber){
-      userNumber = parseInt(prompt('Too high! Guess Again'));
-    } else {
-      userNumber = parseInt(prompt('Too low! Guess Again'));
-    }
-    i++;
-
-    console.log('i: ', i);
+while(userGuess < 4 && userNumber !== luckyNumber){
+  userNumber = parseInt(prompt('Guess a number between 1-20.'));
+  console.log('user guess # ' + userGuess);
+  if (userNumber > luckyNumber){
+    alert('Too high!');
+    userGuess++;
+  } else if (userNumber < luckyNumber) {
+    alert('Too low!');
+    userGuess++;
   }
-  if( userNumber === luckyNumber){
+  else if (userNumber === luckyNumber){
     alert('Good Job! Yes ' + luckyNumber + ' is my lucky number.');
-    correctAnswers++;
+    userGuess = 4;
+    break;
+  } else {
+    alert('Please pick a number from 1-20');
+    userGuess++;
   }
 }
-if (i > 4){
-  alert('Sorry! Better luck next time!');
+if (userGuess === 4 && userNumber !== luckyNumber){
+  alert('Sorry, better luck next time!');
 }
+
 
 //guess the countries I have been to.
 
