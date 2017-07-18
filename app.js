@@ -25,16 +25,12 @@ var questionFun = function(){
     if(userAns === longAns[i] || userAns === shortAns[i]){
       alert(alertRight[i]);
       correctAnswers ++;
-
     } else if(userAns !== longAns[i] || userAns !== shortAns[i]){
       alert(alertWrong[i]);
     } else{
       alert('Yes or No please');
-
     }
-
   }
-
 };
 
 questionFun();
